@@ -1,2 +1,2 @@
-# projeto-inicial-fetch-github-api
-Repositório contendo os arquivos iniciais do projeto de Fetch e GitHub API
+# Desafio API GitHub
+Realização de 3 solicitações adicionais ao [projeto do código base](https://github.com/AmandaMeneghini/projeto-inicial-fetch-github-api.git)
