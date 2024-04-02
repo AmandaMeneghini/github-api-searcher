@@ -3,6 +3,8 @@ const user = {
     name: '',
     bio: '',
     userName: '',
+    followers:'',
+    following:'',
     repositories: [],
 
     setInfo(gitHubUser){
