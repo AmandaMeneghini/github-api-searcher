@@ -1,5 +1,6 @@
 import { getUser } from "./services/user.js"
 import { getRepositories } from "./services/respositories.js"
+import { getUserEvents } from "./services/events.js"
 
 import { user } from "./objects/user.js"
 import { screen } from "./objects/screen.js"
@@ -32,15 +33,25 @@ async function getUserData(userName) {
 
     const userResponse = await getUser(userName)
     const repositoriesResponse = await getRepositories(userName)
+    const eventsResponse = await getUserEvents(userName)
 
     if(userResponse.message === "Not Found"){
         screen.renderNotFound()
         return
     }
 
+    //ver o que ele responde (uma array com eventos)
+    // eventsResponse.forEach( nomeDoUltimoRepositorio => {
+    //     console.log(nomeDoUltimoRepositorio.repo.name);
+    // });
+
+
     user.setInfo(userResponse)
     user.setRepositories(repositoriesResponse)
-    
+    user.setEvents(eventsResponse)
+
+    // console.log(user.setEvents(eventsResponse));
     screen.renderUser(user)
+    screen.renderUserEvents(user)
 }
 

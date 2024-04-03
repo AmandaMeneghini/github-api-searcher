@@ -24,9 +24,24 @@ const screen = {
                                                                     <div>`;
         } 
     },
+
+    renderUserEvents(user){
+        let eventsWithMessage = user.events.filter(event => {
+            return event.type === "PushEvent"
+        })
+
+        eventsWithMessage.forEach(userEvent => {
+        
+            this.userProfile.innerHTML += `<p>${userEvent.repo.name}</p><br>
+                                            <p> - ${userEvent.payload.commits[0].message}</p><br><br>`
+
+
+        });
+    },
+
     renderNotFound(){
         this.userProfile.innerHTML = "<h3>Usuário não encontrado</h3>"
-    }
+    }   
 }
 
 export { screen }
