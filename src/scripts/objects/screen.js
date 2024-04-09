@@ -18,25 +18,29 @@ const screen = {
         });
 
         if(user.repositories.length > 0){
-            this.userProfile.innerHTML +=    `<div class="repositories section">
-                                                                        <h2>Repositórios</h2>
-                                                                        <ul>${repositoriesItens}</ul>
-                                                                    <div>`;
+            this.userProfile.innerHTML +=   `<div class="repositories section">
+                                                <h2>Repositórios</h2>
+                                                <ul>${repositoriesItens}</ul>
+                                            <div>`;
         } 
     },
 
     renderUserEvents(user){
-        let eventsWithMessage = user.events.filter(event => {
+        let eventWithMessage = user.events.filter(event => {
             return event.type === "PushEvent"
         })
 
-        eventsWithMessage.forEach(userEvent => {
-        
-            this.userProfile.innerHTML += `<p>${userEvent.repo.name}</p><br>
-                                            <p> - ${userEvent.payload.commits[0].message}</p><br><br>`
-
-
+        let eventsItens = "";
+        eventWithMessage.forEach(userEvent => {
+            eventsItens += `<li class="repositorie-name">${userEvent.repo.name}<p class="commit-message">- ${userEvent.payload.commits[0].message}</p></li>`
         });
+
+        if(eventWithMessage.length > 0){
+            this.userProfile.innerHTML +=   `<div class="events-container section">
+                                                <h3>Eventos</h3>
+                                                <ul class="event">${eventsItens}</ul>
+                                            </div>`
+        }
     },
 
     renderNotFound(){

@@ -40,6 +40,7 @@ async function getUserData(userName) {
         return
     }
 
+
     //ver o que ele responde (uma array com eventos)
     // eventsResponse.forEach( nomeDoUltimoRepositorio => {
     //     console.log(nomeDoUltimoRepositorio.repo.name);
