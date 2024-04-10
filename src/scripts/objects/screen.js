@@ -6,15 +6,33 @@ const screen = {
                                             <div class="data">
                                                 <h1>${user.name ?? 'Não possuí nome cadastrado 😢'}</h1>
                                                 <p>${user.bio ?? 'Não possuí bio cadastrada 😢'}</p>
-                                                <p>👥seguidores ${user.followers}</p>
-                                                <p>👥seguindo ${user.following}</p>
+                                                <div class="following followers">
+                                                    <p>👥 seguidores ${user.followers}</p>
+                                                    <p>👥 seguindo ${user.following}</p>
+                                                </div>
                                             </div>
                                         </div>`
 
-
         let repositoriesItens = "";
         user.repositories.forEach(repo => {
-            repositoriesItens += `<li><a target="_blank" href="${repo.html_url}">${repo.name}</a></li>`
+            
+            let languageRepositore = "";
+            if(repo.language !== null){
+                languageRepositore = `<p>👨‍💻 ${repo.language}</p>`
+            };
+
+            repositoriesItens += `  <li>
+                                        <a target="_blank" href="${repo.html_url}">
+                                            ${repo.name}
+                                            <div class="repositorie-details">
+                                                <p>🍴 ${repo.forks}</p>
+                                                <p>⭐ ${repo.stargazers_count}</p>
+                                                <p>👀 ${repo.watchers_count}</p>
+                                                ${languageRepositore}
+                                            </div>
+                                        </a>
+                                    </li>`
+
         });
 
         if(user.repositories.length > 0){
