@@ -69,6 +69,14 @@ main {
   border: 1px solid grey;
 }
 
+.container header .input-search-field{
+  position: relative;
+}
+
+.container header .input-search-field #empty-input-messagem-required{
+  display: none;
+}
+
 .container header #btn-search {
   width: 200px;
   font-size: 17px;
@@ -83,6 +91,19 @@ main {
   background-color: hotpink;
   color: #ffffff;
   border-color: #ffffff;
+}
+
+.container header .input-search-field.wrong #input-search{
+  border: 2px solid crimson;
+}
+
+.container header .input-search-field.wrong #empty-input-messagem-required{
+  display: block;
+  position: absolute;
+  color: crimson;
+  font-size: 10px;
+  text-align: left;
+  margin: 2px 0 0 4px;
 }
 
 .container .profile-data{

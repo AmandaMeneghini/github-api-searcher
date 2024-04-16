@@ -6,37 +6,37 @@ Realização de 3 solicitações adicionais ao [projeto do código base](https:/
 1.Adicionar quantidade de seguidores e pessoas que o usuário segue;
 
 
-<img src="./src/images/readme/demo-following.png" style="max-width: 100px">
+<img src="./src/images/readme/design/demo-following.png" style="max-width: 100px">
 
 2.Adicionar eventos e mensagens dos eventos commitados pelo usuário;
 
 
-<img src="./src/images/readme/demo-user-events.png">
+<img src="./src/images/readme/design/demo-user-events.png">
 
 3.Incrementar quantidade de **🍴forks, ⭐stars, 👀watchers e 👨‍💻linguagem** para cada repositório.
 
-<img src="./src/images/readme/demo-datails-repositorie.png" style="max-width: 200px">
+<img src="./src/images/readme/design/demo-datails-repositorie.png" style="max-width: 200px">
 
 <br>
 <br>
 
 # Minha Resolução 👩‍💻
 
-<img src="./src/images/readme/demo-final.gif">
+<img src="./src/images/readme/demo/demo-final.gif">
 
 **[Clique aqui](https://amandameneghini.github.io/desafio-api-github/) para visualizar**
 
 ### Tecnologias Utilizadas 🛠
 
 <div style="display: flex">
-    <img src="./src/images/readme/logo-html-5-1536.png" style="width: 50px" alt="logo HTML">
-    <img src="./src/images/readme/logo-css-3-2048.png" style="width: 50px" alt="logo CSS">
-    <img src="./src/images/readme/javascript_icon_130900.png" style="width: 50px" alt="logo JavaScript">
+    <img src="./src/images/readme/icons/logo-html-5-1536.png" style="width: 50px" alt="logo HTML">
+    <img src="./src/images/readme/icons/logo-css-3-2048.png" style="width: 50px" alt="logo CSS">
+    <img src="./src/images/readme/icons/javascript_icon_130900.png" style="width: 50px" alt="logo JavaScript">
 </div>
 
 ### Extensões Utilizadas 🎨
 
-<img src="./src/images/readme/responsive-viewer.png" style="width: 50px; margin-right: 10px" alt="Responsive Viewer">
+<img src="./src/images/readme/icons/responsive-viewer.png" style="width: 50px; margin-right: 10px" alt="Responsive Viewer">
 
 **Extenção** para auxiliar na criação da responsividade do Chrome Web Store "[Responsive Viewer](https://chromewebstore.google.com/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb)" 
 

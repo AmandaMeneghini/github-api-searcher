@@ -22,11 +22,15 @@ document.getElementById("input-search").addEventListener('keyup', (e) => {
     }
 })
 
+
 function validateEmptyInput(userName){
+    
     if(userName.length === 0){
-        alert("Preencha o campo com o nome do usuário do GitHub")
+        screen.alertUserRequired()  
+        console.log("entrou");   
         return true
     }
+    
 }
 
 async function getUserData(userName) {
@@ -39,11 +43,12 @@ async function getUserData(userName) {
         screen.renderNotFound()
         return
     }
-
+    
     user.setInfo(userResponse)
     user.setRepositories(repositoriesResponse)
     user.setEvents(eventsResponse)
     
+    screen.removeWrongMessage()
     screen.renderUser(user)
     screen.renderUserEvents(user)
 }
