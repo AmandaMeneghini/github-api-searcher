@@ -1,0 +1,11 @@
+:root{
+    --shadow: rgba(0, 0, 0, 0.3);
+    --hard-gray: #24292e;
+    --medium-gray: #36393f;
+    --gray: gray;
+    --soft-gray: #f2f2f2;
+    --white: #fff;
+    --pink: hotpink;
+    --wrong-red: crimson;
+    --soft-purple: #6A5ACD;
+}

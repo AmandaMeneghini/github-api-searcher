@@ -11,7 +11,7 @@ img {
 }
 
 body {
-  background-color:#24292e;
+  background-color: var(--hard-gray);
   font-family: "Kumbh Sans", sans-serif;  
   text-align: center;    
   padding-bottom: 100px;
@@ -27,7 +27,7 @@ main {
 .devicon-github-original{
   font-size: 60px;
   margin-bottom: 30px;
-  color: #FFFFFF;
+  color: var(--white);
 }
 
 .section{
@@ -37,8 +37,8 @@ main {
 .container {
   width: 60%; /* se for uma tela menor que 980px vai se adaptar a 70% */
   max-width: 960px; /* quando chegar em 980px para de aumentar */
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 25px 50px -12px;
-  background-color: #fff;
+  box-shadow: var(--shadow) 0px 25px 50px -12px;
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,7 +66,7 @@ main {
   margin: 0 auto;
   padding: 10px;
   border-radius: 7px;
-  border: 1px solid grey;
+  border: 1px solid var(--gray);
 }
 
 .container header .input-search-field{
@@ -84,23 +84,23 @@ main {
   padding: 10px;
   border-radius: 7px;  
   cursor: pointer;
-  border: 1px solid grey;
+  border: 1px solid var(--gray);
 }
 
 .container header #btn-search:hover {
-  background-color: hotpink;
-  color: #ffffff;
-  border-color: #ffffff;
+  background-color: var(--pink);
+  color: var(--white);
+  border-color: var(--white);
 }
 
 .container header .input-search-field.wrong #input-search{
-  border: 2px solid crimson;
+  border: 2px solid var(--wrong-red);
 }
 
 .container header .input-search-field.wrong #empty-input-messagem-required{
   display: block;
   position: absolute;
-  color: crimson;
+  color: var(--wrong-red);
   font-size: 10px;
   text-align: left;
   margin: 2px 0 0 4px;
@@ -126,7 +126,7 @@ main {
 .container .profile-data .info img{
   width: 50%;
   border-radius: 50%;
-  border: 10px solid hotpink;
+  border: 10px solid var(--pink);
 }
 
 .container .profile-data .info h1{
@@ -162,7 +162,7 @@ main {
 .container .profile-data .repositories ul li a{
   font-weight: 700;
   padding: 20px;
-  border: 1px solid grey;  
+  border: 1px solid var(--gray);  
   margin: 20px;
   display: block;
   border-radius: 7px;
@@ -170,8 +170,8 @@ main {
 }
 
 .container .profile-data .repositories ul li a:hover{
-  background-color:hotpink;
-  color: #fff
+  background-color:var(--pink);
+  color: var(--white)
 }
 
 .container .profile-data.hide{
@@ -188,10 +188,10 @@ main {
 } 
 
 .repositorie-details p{
-  background-color: #6A5ACD;
+  background-color: var(--soft-purple);
   padding: 4px;
   border-radius: 5px;
-  color: #fff;
+  color: var(--white);
   transition: 0.3s ease-in-out;
 }
 
@@ -199,14 +199,14 @@ main {
 /*EVENTS*/
 
 .events-container{
-  background-color: #f2f2f2;
+  background-color: var(--soft-gray);
   width: 100%;
   padding: 30px;
 }
 
 .events-container h3{
   font-size: 1.6rem;
-  color: #36393f;
+  color: var(--medium-gray);
   font-weight: 700;
   margin-bottom: 30px;
   text-align: center;
