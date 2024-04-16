@@ -24,13 +24,10 @@ document.getElementById("input-search").addEventListener('keyup', (e) => {
 
 
 function validateEmptyInput(userName){
-    
     if(userName.length === 0){
-        screen.alertUserRequired()  
-        console.log("entrou");   
+        screen.alertUserRequired()    
         return true
     }
-    
 }
 
 async function getUserData(userName) {
@@ -38,7 +35,10 @@ async function getUserData(userName) {
     const userResponse = await getUser(userName)
     const repositoriesResponse = await getRepositories(userName)
     const eventsResponse = await getUserEvents(userName)
-
+    
+    
+    screen.removeAuthenticationMessageFromEmptyInput()
+    
     if(userResponse.message === "Not Found"){
         screen.renderNotFound()
         return
@@ -48,7 +48,6 @@ async function getUserData(userName) {
     user.setRepositories(repositoriesResponse)
     user.setEvents(eventsResponse)
     
-    screen.removeWrongMessage()
     screen.renderUser(user)
     screen.renderUserEvents(user)
 }

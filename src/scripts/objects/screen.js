@@ -1,21 +1,6 @@
 const screen = {
     inputSearch: document.querySelector(".input-search-field"),
     userProfile: document.querySelector(".profile-data"),
-    alertUserRequired(){
-        let requiredEmptyInputMessage = `<p id="empty-input-messagem-required">*Campo obrigatório</p>`
-
-        this.inputSearch.classList.add("wrong")
-        this.inputSearch.innerHTML = `  <input type="text" id="input-search" placeholder="Digite o nome do usuário no GitHub">
-                                        ${requiredEmptyInputMessage}
-                                        `
-        
-    },
-
-    removeWrongMessage(){
-        if(this.inputSearch.classList.contains("wrong")){
-            this.inputSearch.classList.remove("wrong")
-        }
-    },
     renderUser(user) {
         this.userProfile.innerHTML = `  <div class="info">
                                             <img src="${user.avatarUrl}" alt="Foto do perfil do usuário"/>
@@ -79,7 +64,20 @@ const screen = {
 
     renderNotFound(){
         this.userProfile.innerHTML = "<h3>Usuário não encontrado</h3>"
-    }   
+    },
+    
+    alertUserRequired(){
+        let requiredEmptyInputMessage = `*Campo obrigatório`
+
+        this.inputSearch.classList.add("wrong")
+        this.inputSearch.innerHTML += `<span id="empty-input-messagem-required">${requiredEmptyInputMessage}</span>`
+    },
+
+    removeAuthenticationMessageFromEmptyInput(){
+        if(this.inputSearch.classList.contains("wrong")){
+            this.inputSearch.classList.remove("wrong")
+        }
+    },
 }
 
 export { screen }
