@@ -68,4 +68,4 @@ Passos extras com a extensão **Live Server** no **VS Code**:
 
 6. Vá no VS Code em extenções e baixe a extenção "Live Server"
 
-7. Precione a tecla **"Alt"** depois aperte e solte **"L"** e **"O"**, para a visualização do projeto; ou se preferir clique em **"Go Live"** (lado inferior direito)
+7. Pressione a tecla **"Alt"** depois aperte e solte junto **"L"** e **"O"**, para a visualização do projeto; ou se preferir clique em **"Go Live"** (lado inferior direito)
