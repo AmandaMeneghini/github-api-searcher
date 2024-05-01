@@ -16,20 +16,15 @@ const screen = {
 
         let repositoriesItens = "";
         user.repositories.forEach(repo => {
-            
-            let languageRepositore = "";
-            if(repo.language !== null){
-                languageRepositore = `<p>👨‍💻 ${repo.language}</p>`
-            };
 
             repositoriesItens += `  <li>
                                         <a target="_blank" href="${repo.html_url}">
                                             ${repo.name}
                                             <div class="repositorie-details">
-                                                <p>🍴 ${repo.forks}</p>
-                                                <p>⭐ ${repo.stargazers_count}</p>
-                                                <p>👀 ${repo.watchers_count}</p>
-                                                ${languageRepositore}
+                                                <p>🍴 ${repo.forks ?? 'não possuí forks'}</p>
+                                                <p>⭐ ${repo.stargazers_count ?? 'não possuí stars'}</p>
+                                                <p>👀 ${repo.watchers_count ?? 'não possuí watches'}</p>
+                                                <p>👨‍💻 ${repo.language ?? 'não possuí linguagem'}</p>
                                             </div>
                                         </a>
                                     </li>`
