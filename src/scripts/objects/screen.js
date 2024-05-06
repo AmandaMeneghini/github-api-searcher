@@ -40,7 +40,7 @@ const screen = {
     },
 
     renderUserEvents(user){
-        let eventWithMessage = user.events.filter(event => {
+        const eventWithMessage = user.events.filter(event => {
             return event.type === "PushEvent"
         })
 
