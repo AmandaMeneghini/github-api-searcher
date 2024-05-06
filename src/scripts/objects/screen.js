@@ -8,8 +8,8 @@ const screen = {
                                                 <h1>${user.name ?? 'Não possuí nome cadastrado 😢'}</h1>
                                                 <p>${user.bio ?? 'Não possuí bio cadastrada 😢'}</p>
                                                 <div class="following followers">
-                                                    <p>👥 seguidores ${user.followers}</p>
-                                                    <p>👥 seguindo ${user.following}</p>
+                                                    <p>👥 seguidores ${user.followers ?? '0'}</p>
+                                                    <p>👥 seguindo ${user.following ?? '0'}</p>
                                                 </div>
                                             </div>
                                         </div>`
@@ -21,10 +21,10 @@ const screen = {
                                         <a target="_blank" href="${repo.html_url}">
                                             ${repo.name}
                                             <div class="repositorie-details">
-                                                <p>🍴 ${repo.forks ?? 'não possuí forks'}</p>
-                                                <p>⭐ ${repo.stargazers_count ?? 'não possuí stars'}</p>
-                                                <p>👀 ${repo.watchers_count ?? 'não possuí watches'}</p>
-                                                <p>👨‍💻 ${repo.language ?? 'não possuí linguagem'}</p>
+                                                <p>🍴 ${repo.forks ?? 'Não possuí forks'}</p>
+                                                <p>⭐ ${repo.stargazers_count ?? 'Não possuí stars'}</p>
+                                                <p>👀 ${repo.watchers_count ?? 'Não possuí watchers'}</p>
+                                                <p>👨‍💻 ${repo.language ?? 'Outro'}</p>
                                             </div>
                                         </a>
                                     </li>`
