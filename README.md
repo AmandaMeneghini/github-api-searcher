@@ -22,7 +22,7 @@ Realização de 3 solicitações adicionais ao [projeto do código base](https:/
 
 # Minha Resolução 👩‍💻
 
-<img src="./src/images/readme/demo/demo-final.gif">
+<img src="./src/images/readme/demo/demo-final-II.gif">
 
 **[Clique aqui](https://amandameneghini.github.io/desafio-api-github/) para visualizar**
 
