@@ -46,8 +46,10 @@ const screen = {
             let descriptionRepositorie = userEvent.payload.description;
             if(userEvent.payload.commits && userEvent.payload.commits.length > 0) {
                 eventsItens += `<li class="repositorie-name">${userEvent.repo.name}<p class="commit-message">- ${userEvent.payload.commits[0].message ?? 'sem mensagem de commit'}</p></li>`
-            }else if (descriptionRepositorie === null) {
-                descriptionRepositorie = 'Descrição do repositório não disponível';
+            }else{
+                if(descriptionRepositorie === null){
+                    descriptionRepositorie = 'Descrição não disponível';
+                }
                 eventsItens += `<li class="repositorie-name">${userEvent.repo.name}<p class="commit-message">- ${descriptionRepositorie}</p></li>`
             }
         });
