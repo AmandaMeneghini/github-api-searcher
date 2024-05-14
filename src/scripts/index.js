@@ -36,13 +36,7 @@ async function getUserData(userName) {
     const repositoriesResponse = await getRepositories(userName)
     const eventsResponse = await getUserEvents(userName)
     
-    
     screen.removeAuthenticationMessageFromEmptyInput()
-    
-    if(userResponse.message === "Not Found"){
-        screen.renderNotFound()
-        return
-    }
     
     user.setInfo(userResponse)
     user.setRepositories(repositoriesResponse)

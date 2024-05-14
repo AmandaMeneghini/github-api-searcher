@@ -31,45 +31,50 @@ const screen = {
 
         });
 
-        if(user.repositories.length > 0){
-            this.userProfile.innerHTML +=   `<div class="repositories section">
+        if (user.repositories.length > 0) {
+            this.userProfile.innerHTML += `<div class="repositories section">
                                                 <h2>Repositórios</h2>
                                                 <ul>${repositoriesItens}</ul>
                                             <div>`;
-        } 
+        }
     },
 
-    renderUserEvents(user){
-        const eventWithMessage = user.events.filter(event => {
-            return event.type === "PushEvent"
-        })
+    renderUserEvents(user) {
 
         let eventsItens = "";
-        eventWithMessage.forEach(userEvent => {
-            eventsItens += `<li class="repositorie-name">${userEvent.repo.name}<p class="commit-message">- ${userEvent.payload.commits[0].message}</p></li>`
+        user.events.forEach(userEvent => {
+            let descriptionRepositorie = userEvent.payload.description;
+            if(userEvent.payload.commits && userEvent.payload.commits.length > 0) {
+                eventsItens += `<li class="repositorie-name">${userEvent.repo.name}<p class="commit-message">- ${userEvent.payload.commits[0].message ?? 'sem mensagem de commit'}</p></li>`
+            }else if (descriptionRepositorie === null) {
+                descriptionRepositorie = 'Descrição do repositório não disponível';
+                eventsItens += `<li class="repositorie-name">${userEvent.repo.name}<p class="commit-message">- ${descriptionRepositorie}</p></li>`
+            }
         });
 
-        if(eventWithMessage.length > 0){
-            this.userProfile.innerHTML +=   `<div class="events-container section">
+        console.log(user.events);
+
+        if (user.events.length > 0) {
+            this.userProfile.innerHTML += `<div class="events-container section">
                                                 <h3>Eventos</h3>
                                                 <ul class="event">${eventsItens}</ul>
                                             </div>`
         }
     },
 
-    renderNotFound(){
+    renderNotFound() {
         this.userProfile.innerHTML = "<h3>Usuário não encontrado</h3>"
     },
-    
-    alertUserRequired(){
+
+    alertUserRequired() {
         let requiredEmptyInputMessage = `*Campo obrigatório`
 
         this.inputSearch.classList.add("wrong")
         this.inputSearch.innerHTML += `<span id="empty-input-messagem-required">${requiredEmptyInputMessage}</span>`
     },
 
-    removeAuthenticationMessageFromEmptyInput(){
-        if(this.inputSearch.classList.contains("wrong")){
+    removeAuthenticationMessageFromEmptyInput() {
+        if (this.inputSearch.classList.contains("wrong")) {
             this.inputSearch.classList.remove("wrong")
         }
     },

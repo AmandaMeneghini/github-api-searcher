@@ -1,9 +1,19 @@
-import { baseUrl, eventsQuantity } from "../variables.js";
+import { baseUrl, eventsQuantity, eventsQuantityFetch } from "../variables.js";
 
 async function getUserEvents(userName) {
-    const url = `${baseUrl}/${userName}/events?per_page=${eventsQuantity}`
+    const url = `${baseUrl}/${userName}/events?per_page=${eventsQuantityFetch}`
     const response = await fetch(url);
-    return await response.json();
+    const events = await response.json();
+
+    if(events.message === "Not Found"){
+        return
+    }
+
+    const filteredEvents = events.filter(event => {
+        return event.type === "PushEvent" || event.type === "CreateEvent";
+    })
+
+    return filteredEvents.slice(0, eventsQuantity)
 };
 
 export { getUserEvents };
