@@ -44,12 +44,12 @@ Realização de 3 solicitações adicionais ao [projeto do código base](https:/
 
 1. Crie uma pasta em que deseja clonar o repositório.
 
-2. Com o botão dirteito do mouse selecione a opção "Git Bash HERE"
+2. Com o botão direito do mouse selecione a opção "Git Bash HERE" ou "Abrir no terminal" 
 
-3. Clone o projeto (no prompt do Git Bash):
+3. Clone o projeto (no prompt de comando):
 
 ```
-https://github.com/AmandaMeneghini/desafio-api-github.git
+git clone https://github.com/AmandaMeneghini/desafio-api-github.git
 ```
 
 4. Acesse a pasta do projeto:
@@ -66,6 +66,8 @@ code .
 
 Passos extras com a extensão **Live Server** no **VS Code**:
 
-6. Vá no VS Code em extenções e baixe a extenção "Live Server"
+8. Com o projeto aberto no "Visual Studio Code";
 
-7. Pressione a tecla **"Alt"** depois aperte e solte junto **"L"** e **"O"**, para a visualização do projeto; ou se preferir clique em **"Go Live"** (lado inferior direito)
+7. Vá no VS Code em extenções e baixe a extenção "Live Server";
+
+8. Pressione a tecla **"Alt"** depois aperte e solte junto **"L"** e **"O"**, para a visualização do projeto; ou se preferir clique em **"Go Live"** (lado inferior direito);
