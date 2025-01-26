@@ -24,7 +24,7 @@ Realização de 3 solicitações adicionais ao [projeto do código base](https:/
 
 <img src="./src/images/readme/demo/demo-final-II.gif">
 
-**[Clique aqui](https://amandameneghini.github.io/desafio-api-github/) para visualizar**
+**[Clique aqui](https://amandameneghini.github.io/buscador-api-github/) para visualizar**
 
 ### Tecnologias Utilizadas 🛠
 
