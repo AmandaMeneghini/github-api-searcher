@@ -60,7 +60,7 @@ Follow these steps to get a local copy up and running.
 
 3.  Clone the project:
     ```bash
-    git clone [https://github.com/AmandaMeneghini/github-api-searcher.git](https://github.com/AmandaMeneghini/github-api-searcher.git)
+    git clone https://github.com/AmandaMeneghini/github-api-searcher.git
     ```
 
 4.  Navigate to the project folder:
